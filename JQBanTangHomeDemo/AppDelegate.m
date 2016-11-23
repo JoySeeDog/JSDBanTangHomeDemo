@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "JQScrollViewController.h"
+#import "JQTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [JQScrollViewController new];
+    self.window.rootViewController = [JQTableViewController new];
     
     [self.window makeKeyAndVisible];
     

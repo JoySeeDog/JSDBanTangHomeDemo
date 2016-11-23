@@ -10,7 +10,6 @@
 UIKIT_EXTERN NSString *const JQTableKeyPathContenOffSet;
 
 @interface JQRefreshHeaader:UIView
-@property (nonatomic, assign) CGFloat table_offsety;
 @property (nonatomic, weak) UITableView *tableView;
 
 @end

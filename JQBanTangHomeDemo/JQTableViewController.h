@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JQScrollViewController : UIViewController
+@interface JQTableViewController : UIViewController
 
 @end

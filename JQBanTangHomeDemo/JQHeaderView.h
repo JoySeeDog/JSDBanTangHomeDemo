@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface JQHeaderView : UIView
-
+@property (nonatomic, weak) UITableView *tableView;
 @end
