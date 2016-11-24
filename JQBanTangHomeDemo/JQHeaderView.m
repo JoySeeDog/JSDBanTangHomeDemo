@@ -8,6 +8,10 @@
 
 #import "JQHeaderView.h"
 #import "UIView+Extension.h"
+#import "UIImage+JQImage.h"
+
+
+#define NAVBAR_CHANGE_POINT 50
 
 @interface JQHeaderView()
 @property (nonatomic, strong) UISearchBar *searchBar;
@@ -23,9 +27,12 @@
         [self addSubview:self.searchBar];
         [self addSubview:self.searchButton];
         [self addSubview:self.emailButton];
+        
+        
     }
     return self;
 }
+
 
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
@@ -40,28 +47,58 @@
     
     if ( tableViewoffsetY>=0 && tableViewoffsetY<=136) {
         
-    }else if( tableViewoffsetY < 0){
+        UIColor * color = [UIColor whiteColor];
+//        CGFloat alpha = MIN(1, 1 - ((NAVBAR_CHANGE_POINT + 64 - tableViewoffsetY) / 64));
+            CGFloat alpha = MIN(1, tableViewoffsetY/136);
+            self.backgroundColor = [color colorWithAlphaComponent:alpha];
         
-    }else if (tableViewoffsetY > 136){
+        if (tableViewoffsetY < 125){
+    
+            [UIView animateWithDuration:0.25 animations:^{
+                self.searchButton.hidden = NO;
+                [self.emailButton setBackgroundImage:[UIImage imageNamed:@"home_email_black"] forState:UIControlStateNormal];
+                self.searchBar.frame = CGRectMake(-(self.width-60), 30, self.width-80, 30);
+                self.emailButton.alpha = 1-alpha;
+                self.searchButton.alpha = 1-alpha;
+                NSLog(@"alpha is %lf",alpha);
+                
+            }];
+        } else if (tableViewoffsetY >= 125){
+            
+            [UIView animateWithDuration:0.25 animations:^{
+                self.searchBar.frame = CGRectMake(20, 30, self.width-80, 30);
+                self.searchButton.hidden = YES;
+                self.emailButton.alpha = 1;
+                [self.emailButton setBackgroundImage:[UIImage imageNamed:@"home_email_red"] forState:UIControlStateNormal];
+            }];
+        }
+
+        
+    }else if( tableViewoffsetY < 0){
+       
+        
+    }else if (tableViewoffsetY >  136){
+        
     }
 }
 
 
 - (UISearchBar *)searchBar {
     if (!_searchBar) {
-        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(20, 30, self.width-80, 30)];
+        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-(self.width-60), 30, self.width-80, 30)];
         _searchBar.placeholder = @"搜索值得买的好物";
         _searchBar.layer.cornerRadius = 15;
         _searchBar.layer.masksToBounds = YES;
 
-        [_searchBar setSearchFieldBackgroundImage:[self imageWithColor:[UIColor clearColor] size:_searchBar.size] forState:UIControlStateNormal];
+        [_searchBar setSearchFieldBackgroundImage:[UIImage imageWithColor:[UIColor clearColor] size:_searchBar.size] forState:UIControlStateNormal];
         
-        [_searchBar setBackgroundImage:[self imageWithColor:[[UIColor grayColor] colorWithAlphaComponent:0.4] size:_searchBar.size] ];
+        [_searchBar setBackgroundImage:[UIImage imageWithColor:[[UIColor grayColor] colorWithAlphaComponent:0.4] size:_searchBar.size] ];
         
         UITextField *searchField = [_searchBar valueForKey:@"_searchField"];
-        searchField.textColor = [UIColor redColor];
+        searchField.textColor = [UIColor whiteColor];
         [searchField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
-
+        
+        
         
     }
     return _searchBar;

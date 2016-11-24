@@ -17,5 +17,5 @@
  @param size 输出图片大小
  @return 图片大小
  */
-- (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 @end

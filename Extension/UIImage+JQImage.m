@@ -11,7 +11,7 @@
 @implementation UIImage (JQImage)
 
 
-- (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
 {
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIGraphicsBeginImageContext(rect.size);

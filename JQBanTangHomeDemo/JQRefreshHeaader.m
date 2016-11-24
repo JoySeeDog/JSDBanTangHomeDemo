@@ -43,21 +43,21 @@ NSString *const JQTableKeyPathContenOffSet = @"contentOffset";
 {
     CGFloat tableViewoffsetY = self.tableView.contentOffset.y;
     
-    if ( tableViewoffsetY <= 0  &&tableViewoffsetY > -40) {
+    if ( tableViewoffsetY <= 0  &&tableViewoffsetY > -35) {
         [self hideAllImageView];
         if (self.refreshImageView.isAnimating) {
             [self.refreshImageView stopAnimating];
         }
         
         
-    }else if(tableViewoffsetY < -40){
+    }else if(tableViewoffsetY < -35){
        
         CGFloat offset = 0;
-        if (tableViewoffsetY < -64) {
+        if (tableViewoffsetY < -59) {
             offset = 24;
             [self showAllImageView];
         }else {
-            offset = fabs(tableViewoffsetY)-40;
+            offset = fabs(tableViewoffsetY)-35;
         }
         
         NSInteger imageCount = offset/2.0;
@@ -110,24 +110,24 @@ NSString *const JQTableKeyPathContenOffSet = @"contentOffset";
 }
 
 
-- (UIImageView *)refreshImageView {
-    if (!_refreshImageView) {
-        _refreshImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
-        _refreshImageView.center = self.center;
-        NSMutableArray *imageArray = [NSMutableArray array];
-        for (int i= 1;i<11;i++){
-            
-            NSString *imageUrl  = [NSString stringWithFormat:@"refresh%02d",i];
-            UIImage *image = [UIImage imageNamed:imageUrl];
-            [imageArray addObject:image];
-        }
-        _refreshImageView.animationImages = imageArray;
-        _refreshImageView.animationDuration = 0.25;
-        _refreshImageView.animationRepeatCount = 1;
-        
-    }
-    return _refreshImageView;
-}
+//- (UIImageView *)refreshImageView {
+//    if (!_refreshImageView) {
+//        _refreshImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
+//        _refreshImageView.center = self.center;
+//        NSMutableArray *imageArray = [NSMutableArray array];
+//        for (int i= 1;i<11;i++){
+//            
+//            NSString *imageUrl  = [NSString stringWithFormat:@"refresh%02d",i];
+//            UIImage *image = [UIImage imageNamed:imageUrl];
+//            [imageArray addObject:image];
+//        }
+//        _refreshImageView.animationImages = imageArray;
+//        _refreshImageView.animationDuration = 0.25;
+//        _refreshImageView.animationRepeatCount = 1;
+//        
+//    }
+//    return _refreshImageView;
+//}
 
 - (NSMutableArray *)imageViews {
     if (!_imageViews) {

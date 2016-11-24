@@ -20,7 +20,7 @@
 #define SCREEN_HEIGHT                      [UIScreen mainScreen].bounds.size.height
 #define SCREEN_WIDTH                       [UIScreen mainScreen].bounds.size.width
 #define SCALE_6                                                   (SCREEN_WIDTH / 375)
-#define NAVBAR_CHANGE_POINT 50
+
 
 @interface JQTableViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 
@@ -105,27 +105,21 @@
 {
     
     CGFloat tableViewoffsetY = self.tableView.contentOffset.y;
-    
+    NSLog(@"tableViewoffsetY is %lf",tableViewoffsetY);
     if ( tableViewoffsetY>=0 && tableViewoffsetY<=136) {
-        self.jqSectionPageView.frame = CGRectMake(0, 200-tableViewoffsetY, SCREEN_WIDTH, 60);
+        self.jqSectionPageView.frame = CGRectMake(0, 200-tableViewoffsetY, SCREEN_WIDTH, 42);
         self.cycleScrollView.frame = CGRectMake(0, 0-tableViewoffsetY, SCREEN_WIDTH, 200);
         
-        UIColor * color = [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
         
-        if (tableViewoffsetY > NAVBAR_CHANGE_POINT) {
-            CGFloat alpha = MIN(1, 1 - ((NAVBAR_CHANGE_POINT + 64 - tableViewoffsetY) / 64));
-            self.jqHeaderView.backgroundColor = [color colorWithAlphaComponent:alpha];
-        } else {
-            self.jqHeaderView.backgroundColor = [color colorWithAlphaComponent:0];
-            
-        }
+        
+     
         
     }else if( tableViewoffsetY < 0){
-        self.jqSectionPageView.frame = CGRectMake(0, 200, SCREEN_WIDTH, 60);
+        self.jqSectionPageView.frame = CGRectMake(0, 200, SCREEN_WIDTH, 42);
         self.cycleScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 200);
         
     }else if (tableViewoffsetY > 136){
-        self.jqSectionPageView.frame = CGRectMake(0, 64, SCREEN_WIDTH, 60);
+        self.jqSectionPageView.frame = CGRectMake(0, 64, SCREEN_WIDTH, 42);
         self.cycleScrollView.frame = CGRectMake(0, -136, SCREEN_WIDTH, 200);
     }
 }
@@ -202,7 +196,7 @@
     if (!_jqHeaderView) {
         _jqHeaderView = [[JQHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
         _jqHeaderView.backgroundColor = [UIColor clearColor];
-        _jqRefreshHeader.tableView = self.tableView;
+        _jqHeaderView.tableView = self.tableView;
     }
     return _jqHeaderView;
 }
@@ -210,7 +204,7 @@
 
 - (JQSectionPageView *)jqSectionPageView {
     if (!_jqSectionPageView) {
-        _jqSectionPageView = [[JQSectionPageView alloc] initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 60)];
+        _jqSectionPageView = [[JQSectionPageView alloc] initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 42)];
         _jqSectionPageView.backgroundColor = [UIColor greenColor];
     }
     return _jqSectionPageView;
@@ -219,7 +213,7 @@
 
 - (JQRefreshHeaader *)jqRefreshHeader {
     if (!_jqRefreshHeader) {
-        _jqRefreshHeader  = [[JQRefreshHeaader alloc] initWithFrame:CGRectMake(0, 230, SCREEN_WIDTH, 30)];
+        _jqRefreshHeader  = [[JQRefreshHeaader alloc] initWithFrame:CGRectMake(0, 212, SCREEN_WIDTH, 30)];
         _jqRefreshHeader.backgroundColor = [UIColor whiteColor];
         _jqRefreshHeader.tableView = self.tableView;
     }
@@ -235,10 +229,10 @@
         [_tableView registerClass:[JQBTHomeTableViewCell class] forCellReuseIdentifier:NSStringFromClass([JQBTHomeTableViewCell class])];
         
         
-        UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 260)];
+        UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 242)];
         tableHeaderView.backgroundColor = [UIColor whiteColor];
         
-        _tableView.scrollIndicatorInsets = UIEdgeInsetsMake(200, 0, 0, 0);
+        _tableView.scrollIndicatorInsets = UIEdgeInsetsMake(182, 0, 0, 0);
         _tableView.tableHeaderView = tableHeaderView;
         
         //添加监听者

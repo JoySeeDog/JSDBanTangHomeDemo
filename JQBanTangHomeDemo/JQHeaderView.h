@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger,AnimalName){
+    Dog,
+    Cow,
+    Hen,
+    Cat,
+    Pig
+};
+
 @interface JQHeaderView : UIView
 @property (nonatomic, weak) UITableView *tableView;
+
+
 @end
