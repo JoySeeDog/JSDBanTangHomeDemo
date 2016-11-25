@@ -75,6 +75,10 @@
 		CF9F8C411DE58C5100B79EFE /* recomand_19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF9F8C3F1DE58C5100B79EFE /* recomand_19.jpg */; };
 		CF9F8C421DE58C5100B79EFE /* recomand_20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF9F8C401DE58C5100B79EFE /* recomand_20.jpg */; };
 		CF9F8C451DE5B7BD00B79EFE /* UIImage+JQImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C441DE5B7BD00B79EFE /* UIImage+JQImage.m */; };
+		CF9F8C931DE7E81C00B79EFE /* DAPageIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C8E1DE7E81C00B79EFE /* DAPageIndicatorView.m */; };
+		CF9F8C941DE7E81C00B79EFE /* DAPagesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C901DE7E81C00B79EFE /* DAPagesContainer.m */; };
+		CF9F8C951DE7E81C00B79EFE /* DAPagesContainerTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C921DE7E81C00B79EFE /* DAPagesContainerTopBar.m */; };
+		CF9F8C981DE7E85500B79EFE /* JQHomeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C971DE7E85500B79EFE /* JQHomeListViewController.m */; };
 		CFEAE26A1DDEDC220043D974 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE2691DDEDC220043D974 /* main.m */; };
 		CFEAE26D1DDEDC220043D974 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE26C1DDEDC220043D974 /* AppDelegate.m */; };
 		CFEAE2751DDEDC220043D974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFEAE2741DDEDC220043D974 /* Assets.xcassets */; };
@@ -261,6 +265,14 @@
 		CF9F8C401DE58C5100B79EFE /* recomand_20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recomand_20.jpg; sourceTree = "<group>"; };
 		CF9F8C431DE5B7BD00B79EFE /* UIImage+JQImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JQImage.h"; sourceTree = "<group>"; };
 		CF9F8C441DE5B7BD00B79EFE /* UIImage+JQImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JQImage.m"; sourceTree = "<group>"; };
+		CF9F8C8D1DE7E81C00B79EFE /* DAPageIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPageIndicatorView.h; sourceTree = "<group>"; };
+		CF9F8C8E1DE7E81C00B79EFE /* DAPageIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPageIndicatorView.m; sourceTree = "<group>"; };
+		CF9F8C8F1DE7E81C00B79EFE /* DAPagesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPagesContainer.h; sourceTree = "<group>"; };
+		CF9F8C901DE7E81C00B79EFE /* DAPagesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPagesContainer.m; sourceTree = "<group>"; };
+		CF9F8C911DE7E81C00B79EFE /* DAPagesContainerTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPagesContainerTopBar.h; sourceTree = "<group>"; };
+		CF9F8C921DE7E81C00B79EFE /* DAPagesContainerTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPagesContainerTopBar.m; sourceTree = "<group>"; };
+		CF9F8C961DE7E85500B79EFE /* JQHomeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQHomeListViewController.h; sourceTree = "<group>"; };
+		CF9F8C971DE7E85500B79EFE /* JQHomeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQHomeListViewController.m; sourceTree = "<group>"; };
 		CFEAE2651DDEDC220043D974 /* JQBanTangHomeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JQBanTangHomeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEAE2691DDEDC220043D974 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CFEAE26B1DDEDC220043D974 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -536,6 +548,19 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		CF9F8C8C1DE7E81C00B79EFE /* DAPagesContainer */ = {
+			isa = PBXGroup;
+			children = (
+				CF9F8C8D1DE7E81C00B79EFE /* DAPageIndicatorView.h */,
+				CF9F8C8E1DE7E81C00B79EFE /* DAPageIndicatorView.m */,
+				CF9F8C8F1DE7E81C00B79EFE /* DAPagesContainer.h */,
+				CF9F8C901DE7E81C00B79EFE /* DAPagesContainer.m */,
+				CF9F8C911DE7E81C00B79EFE /* DAPagesContainerTopBar.h */,
+				CF9F8C921DE7E81C00B79EFE /* DAPagesContainerTopBar.m */,
+			);
+			path = DAPagesContainer;
+			sourceTree = "<group>";
+		};
 		CFEAE25C1DDEDC210043D974 = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +658,8 @@
 			children = (
 				CFEAE2A71DDEDCCB0043D974 /* JQTableViewController.h */,
 				CFEAE2A81DDEDCCB0043D974 /* JQTableViewController.m */,
+				CF9F8C961DE7E85500B79EFE /* JQHomeListViewController.h */,
+				CF9F8C971DE7E85500B79EFE /* JQHomeListViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -640,6 +667,7 @@
 		CFEAE2AA1DDEDEB20043D974 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				CF9F8C8C1DE7E81C00B79EFE /* DAPagesContainer */,
 				CF9F8C171DE5435E00B79EFE /* Masonry */,
 				CF9F8ABA1DE29ACD00B79EFE /* MJRefresh */,
 				CFEAE2C21DDEE1BE0043D974 /* SDWebImage */,
@@ -1032,6 +1060,7 @@
 				CF9F8C341DE5435E00B79EFE /* MASLayoutConstraint.m in Sources */,
 				CFEAE2C01DDEE1930043D974 /* SDCycleScrollView.m in Sources */,
 				CF9F8AEB1DE29ACD00B79EFE /* MJRefreshHeader.m in Sources */,
+				CF9F8C951DE7E81C00B79EFE /* DAPagesContainerTopBar.m in Sources */,
 				CF9F8AF61DE29ACD00B79EFE /* MJRefreshConst.m in Sources */,
 				CF9F8C371DE5435E00B79EFE /* NSArray+MASAdditions.m in Sources */,
 				CFEAE2A41DDEDC9F0043D974 /* JQHeaderView.m in Sources */,
@@ -1047,9 +1076,12 @@
 				CFEAE2ED1DDEE1BE0043D974 /* UIButton+WebCache.m in Sources */,
 				CF9F8AEC1DE29ACD00B79EFE /* MJRefreshAutoGifFooter.m in Sources */,
 				CF9F8AF21DE29ACD00B79EFE /* MJRefreshGifHeader.m in Sources */,
+				CF9F8C981DE7E85500B79EFE /* JQHomeListViewController.m in Sources */,
 				CF9F8AE91DE29ACD00B79EFE /* MJRefreshComponent.m in Sources */,
 				CFEAE29E1DDEDC4E0043D974 /* UIView+Extension.m in Sources */,
+				CF9F8C931DE7E81C00B79EFE /* DAPageIndicatorView.m in Sources */,
 				CFEAE2EC1DDEE1BE0043D974 /* SDWebImagePrefetcher.m in Sources */,
+				CF9F8C941DE7E81C00B79EFE /* DAPagesContainer.m in Sources */,
 				CF9F8AF71DE29ACD00B79EFE /* UIScrollView+MJExtension.m in Sources */,
 				CFEAE2E81DDEE1BE0043D974 /* SDWebImageDecoder.m in Sources */,
 				CF9F8C161DE5418500B79EFE /* JQBTHomeTableViewCell.m in Sources */,

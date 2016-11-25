@@ -16,6 +16,8 @@
 #import "JQBTHomeTableViewCell.h"
 #import "JQBTHomeRecomandModel.h"
 
+#import "DAPagesContainerTopBar.h"
+
 
 #define SCREEN_HEIGHT                      [UIScreen mainScreen].bounds.size.height
 #define SCREEN_WIDTH                       [UIScreen mainScreen].bounds.size.width
@@ -25,7 +27,7 @@
 @interface JQTableViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) JQSectionPageView *jqSectionPageView;
+@property (nonatomic, strong) DAPagesContainerTopBar *jqSectionPageView;
 @property (nonatomic, strong) JQHeaderView *jqHeaderView;
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
 @property (nonatomic, strong) JQRefreshHeaader *jqRefreshHeader;
@@ -202,10 +204,11 @@
 }
 
 
-- (JQSectionPageView *)jqSectionPageView {
+- (DAPagesContainerTopBar *)jqSectionPageView {
     if (!_jqSectionPageView) {
-        _jqSectionPageView = [[JQSectionPageView alloc] initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 42)];
+        _jqSectionPageView = [[DAPagesContainerTopBar alloc] initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 42)];
         _jqSectionPageView.backgroundColor = [UIColor greenColor];
+        _jqSectionPageView.itemTitles = @[@"昨日",@"上周",@"上月",@"总榜",@"昨日",@"上周",@"上月",@"总榜"];
     }
     return _jqSectionPageView;
 }
