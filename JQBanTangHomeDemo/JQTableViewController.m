@@ -208,7 +208,7 @@
     if (!_jqSectionPageView) {
         _jqSectionPageView = [[DAPagesContainerTopBar alloc] initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 42)];
         _jqSectionPageView.backgroundColor = [UIColor greenColor];
-        _jqSectionPageView.itemTitles = @[@"昨日",@"上周",@"上月",@"总榜",@"昨日",@"上周",@"上月",@"总榜"];
+   
     }
     return _jqSectionPageView;
 }
