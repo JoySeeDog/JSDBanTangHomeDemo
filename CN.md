@@ -96,8 +96,7 @@
 ```
 做完以上工作后，我们应该可以看到的是这样的效果。
 
-![这里写图片描述](http://img.blog.csdn.net/20161220231829286?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhvdXpob3VqaWFucXVhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-
+[![Screenshot](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome01.gif)](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome01.gif)
 --------
 
 # 添加下拉刷新的文字效果
@@ -141,7 +140,9 @@
 
 ```
 把这里面使用的图片是我自己用PS做的，所以看起来很丑，实现后的效果如下
-![这里写图片描述](http://img.blog.csdn.net/20161220234119182?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhvdXpob3VqaWFucXVhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+[![Screenshot](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome02.gif)](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome02.gif)
+
 
 # 添加分类滑动
 
@@ -198,7 +199,9 @@
 这样简单实现的滑动控件肯定有很多值得优化的地方，最简单优化就是把下面的`UIScrollView`换成`UICollectionView`，这样就可以复用Cell从而优化内存。
 
 实现后的基本效果如下
-![这里写图片描述](http://img.blog.csdn.net/20161221232424876?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhvdXpob3VqaWFucXVhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+[![Screenshot](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome03.gif)](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome03.gif)
+
 
 
 
@@ -257,7 +260,8 @@ self.currentTableView  = self.tableViews[index];
 
 ```
 最后实现的效果如下所示，感觉还可以吧。
-![这里写图片描述](http://img.blog.csdn.net/20161222000234766?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhvdXpob3VqaWFucXVhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+[![Screenshot](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome04.gif)](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome04.gif)
 
 # 最后
 
@@ -265,5 +269,5 @@ self.currentTableView  = self.tableViews[index];
 
 工程里面的`Resource`目录下是我抓包到的一些数据，还有一些自己的图片。为了方便大家学习使用，我没有把图片文件放入`Assets.xcassets`目录下，因为放入这里，对于需要图片学习复用的时候需要一张图片一只图片拷贝出来，费时间费力气。里面关于半糖的数据仅用于交流和学习，若用于商业用途，后果自负。
 
-欢迎提issue,或者直接邮件联系我，如果觉得满意，请给个Satr。
+欢迎提issue,博客地址[http://blog.csdn.net/zhouzhoujianquan/article/details/53769501](http://blog.csdn.net/zhouzhoujianquan/article/details/53769501)或者直接邮件联系我如果觉得满意，请给个Satr。
 

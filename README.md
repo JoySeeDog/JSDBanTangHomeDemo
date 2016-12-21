@@ -1,10 +1,19 @@
 # JSDBanTangHomeDemo
 
-by [Joyseedog](http://www.iseedog.com)  [中文文档](https://github.com/joyseedog/JQCustomTabbar/blob/master/CN.md)
+by [Joyseedog](http://www.iseedog.com)  [中文文档](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/CN.md)
 
 ## DESCRIPTION ##
 
-[![Screenshot](https://github.com/JoySeeDog/JSDCustomTabbar/blob/master/jqtabbar_gif.gif)](https://github.com/joyseedog/JSDCustomTabbar/blob/master)
+[![Screenshot](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome01.gif)](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome01.gif)
+
+[![Screenshot](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome02.gif)](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome02.gif)
+
+
+[![Screenshot](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome03.gif)](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome03.gif)
+
+
+[![Screenshot](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome04.gif)](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome04.gif)
+
 
  * This demo provides a simple way to customizable TabBar for your iOS app.
  * build in xcode8 with ARC.
