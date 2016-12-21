@@ -267,7 +267,7 @@ self.currentTableView  = self.tableViews[index];
 
 里面的点击事件我都没有添加，这些都很简单。。不想浪费时间在这上面。
 
-工程里面的`Resource`目录下是我抓包到的一些数据，还有一些自己的图片。为了方便大家学习使用，我没有把图片文件放入`Assets.xcassets`目录下，因为放入这里，对于需要图片学习复用的时候需要一张图片一只图片拷贝出来，费时间费力气。里面关于半糖的数据仅用于交流和学习，若用于商业用途，后果自负。
+工程里面的`Resource`目录下是我抓包到的一些数据，为了防止半糖修改权限下载不到图片，我把需要的图片都提前下载一份，一旦下载失败就使用本地图片，还有一些自己的图片。为了方便大家学习使用，我没有把图片文件放入`Assets.xcassets`目录下，因为放入这里，对于需要图片学习复用的时候需要一张图片一只图片拷贝出来，费时间费力气。里面关于半糖的数据仅用于交流和学习，若用于商业用途，后果自负。
 
-欢迎提issue,博客地址[http://blog.csdn.net/zhouzhoujianquan/article/details/53769501](http://blog.csdn.net/zhouzhoujianquan/article/details/53769501)或者直接邮件联系我如果觉得满意，请给个Satr。
+欢迎提issue,博客地址[ 半糖iOS版首页实现与基本原理揭秘](http://blog.csdn.net/zhouzhoujianquan/article/details/53769501)或者直接邮件联系我如果觉得满意，请给个Satr。
 
