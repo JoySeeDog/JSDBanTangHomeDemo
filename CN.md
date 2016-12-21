@@ -13,7 +13,7 @@
 
 然后我实在是想不到什么好办法，打算用`UISwipGesturer`,不过想想这就算了吧。太愚蠢了，而且也会很麻烦。像我这样懒的，总想少写几行代码。怎么办呢，再想想。有一天在地铁上拿出半糖的APP来研究，突然灵光一闪，想到了。因为既然这么流畅，那一定是使用了原生的`UITableView`,然后再使用`scrollIndicatorInsets`这个属性就可以伪装出`tableView`是从下面开始的效果,然后我的`tableView`从坐标(0,0)的位置开始。上面添加一个空白的View把内容往下面撑即可实现类似的效果。如图(为了便于看清楚布局，我给每个视图留了一个边距)
 
-![这里写图片描述](http://img.blog.csdn.net/20161220224723354?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhvdXpob3VqaWFucXVhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+[![Screenshot](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome.png)](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome.png)
 
 
 能想到这一步其实完成了很大的工作了。接下来就是给上面的搜索框和轮播页面添加坐标变化的事件了。
