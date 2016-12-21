@@ -8,7 +8,7 @@
 
 #import "JQBTHomeTableViewCell.h"
 #import "Masonry.h"
-#import "JQBTHomeRecomandModel.h"
+#import "JSDTHomeRecomandModel.h"
 #import "UIImageView+WebCache.h"
 #import "SDImageCache.h"
 
@@ -105,7 +105,7 @@
    
 }
 
-- (void)setHomeRecomandModel:(JQBTHomeRecomandModel *)homeRecomandModel {
+- (void)setHomeRecomandModel:(JSDTHomeRecomandModel *)homeRecomandModel {
 
     [self.topicimageView sd_setImageWithURL:[NSURL URLWithString:homeRecomandModel.picUrl]  placeholderImage:homeRecomandModel.placeholderImage];
     self.titleLabel.text = homeRecomandModel.title;

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface JQBTHomeRecomandModel : NSObject
+@interface JSDTHomeRecomandModel : NSObject
 @property (nonatomic, strong) UIImage *placeholderImage;
 @property (nonatomic, copy) NSString *picUrl;
 @property (nonatomic, copy) NSString *title;

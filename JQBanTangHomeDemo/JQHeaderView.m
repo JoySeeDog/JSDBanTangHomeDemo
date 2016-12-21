@@ -36,50 +36,52 @@
 
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
-    [super willMoveToSuperview:newSuperview];
-    NSKeyValueObservingOptions options = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
-    [_tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
-}
+    
+     [super willMoveToSuperview:newSuperview];
+    for (UITableView *tableView in self.tableViews) {
+        NSKeyValueObservingOptions options = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
+        [tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
+    }
+    
+   }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    CGFloat tableViewoffsetY = self.tableView.contentOffset.y;
     
-    if ( tableViewoffsetY>=0 && tableViewoffsetY<=136) {
-        
-        UIColor * color = [UIColor whiteColor];
-//        CGFloat alpha = MIN(1, 1 - ((NAVBAR_CHANGE_POINT + 64 - tableViewoffsetY) / 64));
-            CGFloat alpha = MIN(1, tableViewoffsetY/136);
-            self.backgroundColor = [color colorWithAlphaComponent:alpha];
-        
-        if (tableViewoffsetY < 125){
     
-            [UIView animateWithDuration:0.25 animations:^{
-                self.searchButton.hidden = NO;
-                [self.emailButton setBackgroundImage:[UIImage imageNamed:@"home_email_black"] forState:UIControlStateNormal];
-                self.searchBar.frame = CGRectMake(-(self.width-60), 30, self.width-80, 30);
-                self.emailButton.alpha = 1-alpha;
-                self.searchButton.alpha = 1-alpha;
-                NSLog(@"alpha is %lf",alpha);
-                
-            }];
-        } else if (tableViewoffsetY >= 125){
-            
-            [UIView animateWithDuration:0.25 animations:^{
-                self.searchBar.frame = CGRectMake(20, 30, self.width-80, 30);
-                self.searchButton.hidden = YES;
-                self.emailButton.alpha = 1;
-                [self.emailButton setBackgroundImage:[UIImage imageNamed:@"home_email_red"] forState:UIControlStateNormal];
-            }];
-        }
-
-        
-    }else if( tableViewoffsetY < 0){
-       
-        
-    }else if (tableViewoffsetY >  136){
-        
+    if (![keyPath isEqualToString:@"contentOffset"]) {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+        return;
     }
+    UITableView *tableView = (UITableView *)object;
+    CGFloat tableViewoffsetY = tableView.contentOffset.y;
+    
+    UIColor * color = [UIColor whiteColor];
+    CGFloat alpha = MIN(1, tableViewoffsetY/136);
+    
+    self.backgroundColor = [color colorWithAlphaComponent:alpha];
+    
+    if (tableViewoffsetY < 125){
+        
+        [UIView animateWithDuration:0.25 animations:^{
+            self.searchButton.hidden = NO;
+            [self.emailButton setBackgroundImage:[UIImage imageNamed:@"home_email_black"] forState:UIControlStateNormal];
+            self.searchBar.frame = CGRectMake(-(self.width-60), 30, self.width-80, 30);
+            self.emailButton.alpha = 1-alpha;
+            self.searchButton.alpha = 1-alpha;
+            
+            
+        }];
+    } else if (tableViewoffsetY >= 125){
+        
+        [UIView animateWithDuration:0.25 animations:^{
+            self.searchBar.frame = CGRectMake(20, 30, self.width-80, 30);
+            self.searchButton.hidden = YES;
+            self.emailButton.alpha = 1;
+            [self.emailButton setBackgroundImage:[UIImage imageNamed:@"home_email_red"] forState:UIControlStateNormal];
+        }];
+    }
+    
 }
 
 

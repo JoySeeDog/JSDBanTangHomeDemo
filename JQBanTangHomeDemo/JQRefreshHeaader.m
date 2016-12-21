@@ -33,44 +33,45 @@ NSString *const JQTableKeyPathContenOffSet = @"contentOffset";
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     [super willMoveToSuperview:newSuperview];
+    
     NSKeyValueObservingOptions options = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
-    [_tableView addObserver:self forKeyPath:JQTableKeyPathContenOffSet options:options context:nil];
+    [self.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
+    
 }
 
 
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    CGFloat tableViewoffsetY = self.tableView.contentOffset.y;
+    
+    
+    if (![keyPath isEqualToString:@"contentOffset"]) {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+        return;
+    }
+    
+    UITableView *tableView = (UITableView *)object;
+    CGFloat tableViewoffsetY = tableView.contentOffset.y;
     
     if ( tableViewoffsetY <= 0  &&tableViewoffsetY > -35) {
-        [self hideAllImageView];
-        if (self.refreshImageView.isAnimating) {
-            [self.refreshImageView stopAnimating];
-        }
         
+        [self hideAllImageView];
         
     }else if(tableViewoffsetY < -35){
        
-        CGFloat offset = 0;
         if (tableViewoffsetY < -59) {
-            offset = 24;
+
             [self showAllImageView];
         }else {
-            offset = fabs(tableViewoffsetY)-35;
+            CGFloat offset = fabs(tableViewoffsetY)-35;
+            NSInteger imageCount = offset/2.0;//两个偏移量切换一张图片
+            [self hideImageViewExcept:imageCount];
         }
-        
-        NSInteger imageCount = offset/2.0;
-        [self hideImageViewExcept:imageCount];
       
     }else if (tableViewoffsetY <136){
         
     }
     
-    if (tableViewoffsetY<-64 && !self.tableView.isDragging) {
-//        [self hideAllImageView];
-//        [self.refreshImageView startAnimating];
-    }
     
 }
 
@@ -109,25 +110,6 @@ NSString *const JQTableKeyPathContenOffSet = @"contentOffset";
     }
 }
 
-
-//- (UIImageView *)refreshImageView {
-//    if (!_refreshImageView) {
-//        _refreshImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
-//        _refreshImageView.center = self.center;
-//        NSMutableArray *imageArray = [NSMutableArray array];
-//        for (int i= 1;i<11;i++){
-//            
-//            NSString *imageUrl  = [NSString stringWithFormat:@"refresh%02d",i];
-//            UIImage *image = [UIImage imageNamed:imageUrl];
-//            [imageArray addObject:image];
-//        }
-//        _refreshImageView.animationImages = imageArray;
-//        _refreshImageView.animationDuration = 0.25;
-//        _refreshImageView.animationRepeatCount = 1;
-//        
-//    }
-//    return _refreshImageView;
-//}
 
 - (NSMutableArray *)imageViews {
     if (!_imageViews) {

@@ -18,4 +18,12 @@
  @return 图片大小
  */
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
+
+- (UIImage *)transformWidth:(CGFloat)width height:(CGFloat)height;
+// 等比压缩图片到targetsize
+- (UIImage *)imageCompressForSize:(UIImage *)sourceImage targetSize:(CGSize)size;
+// 压缩图片小于length字节
+- (NSData *)compressImageBelow:(NSInteger)length;
+- (UIImage *)squareImage;
+
 @end

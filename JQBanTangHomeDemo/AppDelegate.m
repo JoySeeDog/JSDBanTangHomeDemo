@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "JQTableViewController.h"
+#import "JSDHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [JQTableViewController new];
+    self.window.rootViewController = [JSDHomeViewController new];
     
     [self.window makeKeyAndVisible];
     

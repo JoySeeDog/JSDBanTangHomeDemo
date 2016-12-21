@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JQTableViewController : UIViewController
+
+
+@interface JSDHomeViewController : UIViewController
 
 @end

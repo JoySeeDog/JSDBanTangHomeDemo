@@ -6,8 +6,8 @@
 //  Copyright © 2016年 JoySeeDog. All rights reserved.
 //
 
-#import "JQBTHomeRecomandModel.h"
+#import "JSDTHomeRecomandModel.h"
 
-@implementation JQBTHomeRecomandModel
+@implementation JSDTHomeRecomandModel
 
 @end

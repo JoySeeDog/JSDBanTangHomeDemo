@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF63420C1E0161A80077B81F /* JSDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63420B1E0161A80077B81F /* JSDTableViewController.m */; };
+		CF63420F1E0269F10077B81F /* UIButton+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63420E1E0269F10077B81F /* UIButton+Size.m */; };
+		CF6342111E02A2B40077B81F /* nar_bgbg.png in Resources */ = {isa = PBXBuildFile; fileRef = CF6342101E02A2B30077B81F /* nar_bgbg.png */; };
 		CF9F8AE71DE29ACD00B79EFE /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8ABD1DE29ACD00B79EFE /* MJRefreshAutoFooter.m */; };
 		CF9F8AE81DE29ACD00B79EFE /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8ABF1DE29ACD00B79EFE /* MJRefreshBackFooter.m */; };
 		CF9F8AE91DE29ACD00B79EFE /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8AC11DE29ACD00B79EFE /* MJRefreshComponent.m */; };
@@ -71,14 +74,10 @@
 		CF9F8C381DE5435E00B79EFE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C2B1DE5435E00B79EFE /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		CF9F8C391DE5435E00B79EFE /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C2D1DE5435E00B79EFE /* View+MASAdditions.m */; };
 		CF9F8C3A1DE5435E00B79EFE /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C301DE5435E00B79EFE /* ViewController+MASAdditions.m */; };
-		CF9F8C3E1DE57D0C00B79EFE /* JQBTHomeRecomandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C3D1DE57D0C00B79EFE /* JQBTHomeRecomandModel.m */; };
+		CF9F8C3E1DE57D0C00B79EFE /* JSDTHomeRecomandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C3D1DE57D0C00B79EFE /* JSDTHomeRecomandModel.m */; };
 		CF9F8C411DE58C5100B79EFE /* recomand_19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF9F8C3F1DE58C5100B79EFE /* recomand_19.jpg */; };
 		CF9F8C421DE58C5100B79EFE /* recomand_20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF9F8C401DE58C5100B79EFE /* recomand_20.jpg */; };
 		CF9F8C451DE5B7BD00B79EFE /* UIImage+JQImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C441DE5B7BD00B79EFE /* UIImage+JQImage.m */; };
-		CF9F8C931DE7E81C00B79EFE /* DAPageIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C8E1DE7E81C00B79EFE /* DAPageIndicatorView.m */; };
-		CF9F8C941DE7E81C00B79EFE /* DAPagesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C901DE7E81C00B79EFE /* DAPagesContainer.m */; };
-		CF9F8C951DE7E81C00B79EFE /* DAPagesContainerTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C921DE7E81C00B79EFE /* DAPagesContainerTopBar.m */; };
-		CF9F8C981DE7E85500B79EFE /* JQHomeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9F8C971DE7E85500B79EFE /* JQHomeListViewController.m */; };
 		CFEAE26A1DDEDC220043D974 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE2691DDEDC220043D974 /* main.m */; };
 		CFEAE26D1DDEDC220043D974 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE26C1DDEDC220043D974 /* AppDelegate.m */; };
 		CFEAE2751DDEDC220043D974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFEAE2741DDEDC220043D974 /* Assets.xcassets */; };
@@ -87,8 +86,7 @@
 		CFEAE28E1DDEDC220043D974 /* JQBanTangHomeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE28D1DDEDC220043D974 /* JQBanTangHomeDemoUITests.m */; };
 		CFEAE29E1DDEDC4E0043D974 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE29D1DDEDC4E0043D974 /* UIView+Extension.m */; };
 		CFEAE2A41DDEDC9F0043D974 /* JQHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE2A11DDEDC9F0043D974 /* JQHeaderView.m */; };
-		CFEAE2A51DDEDC9F0043D974 /* JQSectionPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE2A31DDEDC9F0043D974 /* JQSectionPageView.m */; };
-		CFEAE2A91DDEDCCB0043D974 /* JQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE2A81DDEDCCB0043D974 /* JQTableViewController.m */; };
+		CFEAE2A91DDEDCCB0043D974 /* JSDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE2A81DDEDCCB0043D974 /* JSDHomeViewController.m */; };
 		CFEAE2BB1DDEE1930043D974 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE2AE1DDEE1930043D974 /* TAAbstractDotView.m */; };
 		CFEAE2BC1DDEE1930043D974 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE2B01DDEE1930043D974 /* TAAnimatedDotView.m */; };
 		CFEAE2BD1DDEE1930043D974 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAE2B21DDEE1930043D974 /* TADotView.m */; };
@@ -159,6 +157,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF63420A1E0161A70077B81F /* JSDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDTableViewController.h; sourceTree = "<group>"; };
+		CF63420B1E0161A80077B81F /* JSDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDTableViewController.m; sourceTree = "<group>"; };
+		CF63420D1E0269F00077B81F /* UIButton+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Size.h"; sourceTree = "<group>"; };
+		CF63420E1E0269F10077B81F /* UIButton+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Size.m"; sourceTree = "<group>"; };
+		CF6342101E02A2B30077B81F /* nar_bgbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nar_bgbg.png; sourceTree = "<group>"; };
 		CF9F8ABC1DE29ACD00B79EFE /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		CF9F8ABD1DE29ACD00B79EFE /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		CF9F8ABE1DE29ACD00B79EFE /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -259,20 +262,12 @@
 		CF9F8C2E1DE5435E00B79EFE /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		CF9F8C2F1DE5435E00B79EFE /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		CF9F8C301DE5435E00B79EFE /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		CF9F8C3C1DE57D0C00B79EFE /* JQBTHomeRecomandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQBTHomeRecomandModel.h; sourceTree = "<group>"; };
-		CF9F8C3D1DE57D0C00B79EFE /* JQBTHomeRecomandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQBTHomeRecomandModel.m; sourceTree = "<group>"; };
+		CF9F8C3C1DE57D0C00B79EFE /* JSDTHomeRecomandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDTHomeRecomandModel.h; sourceTree = "<group>"; };
+		CF9F8C3D1DE57D0C00B79EFE /* JSDTHomeRecomandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDTHomeRecomandModel.m; sourceTree = "<group>"; };
 		CF9F8C3F1DE58C5100B79EFE /* recomand_19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recomand_19.jpg; sourceTree = "<group>"; };
 		CF9F8C401DE58C5100B79EFE /* recomand_20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recomand_20.jpg; sourceTree = "<group>"; };
 		CF9F8C431DE5B7BD00B79EFE /* UIImage+JQImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JQImage.h"; sourceTree = "<group>"; };
 		CF9F8C441DE5B7BD00B79EFE /* UIImage+JQImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JQImage.m"; sourceTree = "<group>"; };
-		CF9F8C8D1DE7E81C00B79EFE /* DAPageIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPageIndicatorView.h; sourceTree = "<group>"; };
-		CF9F8C8E1DE7E81C00B79EFE /* DAPageIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPageIndicatorView.m; sourceTree = "<group>"; };
-		CF9F8C8F1DE7E81C00B79EFE /* DAPagesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPagesContainer.h; sourceTree = "<group>"; };
-		CF9F8C901DE7E81C00B79EFE /* DAPagesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPagesContainer.m; sourceTree = "<group>"; };
-		CF9F8C911DE7E81C00B79EFE /* DAPagesContainerTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPagesContainerTopBar.h; sourceTree = "<group>"; };
-		CF9F8C921DE7E81C00B79EFE /* DAPagesContainerTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPagesContainerTopBar.m; sourceTree = "<group>"; };
-		CF9F8C961DE7E85500B79EFE /* JQHomeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQHomeListViewController.h; sourceTree = "<group>"; };
-		CF9F8C971DE7E85500B79EFE /* JQHomeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQHomeListViewController.m; sourceTree = "<group>"; };
 		CFEAE2651DDEDC220043D974 /* JQBanTangHomeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JQBanTangHomeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEAE2691DDEDC220043D974 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CFEAE26B1DDEDC220043D974 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -290,10 +285,8 @@
 		CFEAE29D1DDEDC4E0043D974 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		CFEAE2A01DDEDC9F0043D974 /* JQHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQHeaderView.h; sourceTree = "<group>"; };
 		CFEAE2A11DDEDC9F0043D974 /* JQHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQHeaderView.m; sourceTree = "<group>"; };
-		CFEAE2A21DDEDC9F0043D974 /* JQSectionPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQSectionPageView.h; sourceTree = "<group>"; };
-		CFEAE2A31DDEDC9F0043D974 /* JQSectionPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQSectionPageView.m; sourceTree = "<group>"; };
-		CFEAE2A71DDEDCCB0043D974 /* JQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQTableViewController.h; sourceTree = "<group>"; };
-		CFEAE2A81DDEDCCB0043D974 /* JQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQTableViewController.m; sourceTree = "<group>"; };
+		CFEAE2A71DDEDCCB0043D974 /* JSDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDHomeViewController.h; sourceTree = "<group>"; };
+		CFEAE2A81DDEDCCB0043D974 /* JSDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDHomeViewController.m; sourceTree = "<group>"; };
 		CFEAE2AD1DDEE1930043D974 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
 		CFEAE2AE1DDEE1930043D974 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
 		CFEAE2AF1DDEE1930043D974 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
@@ -492,6 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				CF9F8BFC1DE5413B00B79EFE /* home_email_black.png */,
+				CF6342101E02A2B30077B81F /* nar_bgbg.png */,
 				CF9F8BFD1DE5413B00B79EFE /* home_email_red.png */,
 				CF9F8BFE1DE5413B00B79EFE /* home_like.png */,
 				CF9F8BFF1DE5413B00B79EFE /* home_search_icon.png */,
@@ -542,23 +536,10 @@
 		CF9F8C3B1DE54B5500B79EFE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CF9F8C3C1DE57D0C00B79EFE /* JQBTHomeRecomandModel.h */,
-				CF9F8C3D1DE57D0C00B79EFE /* JQBTHomeRecomandModel.m */,
+				CF9F8C3C1DE57D0C00B79EFE /* JSDTHomeRecomandModel.h */,
+				CF9F8C3D1DE57D0C00B79EFE /* JSDTHomeRecomandModel.m */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		CF9F8C8C1DE7E81C00B79EFE /* DAPagesContainer */ = {
-			isa = PBXGroup;
-			children = (
-				CF9F8C8D1DE7E81C00B79EFE /* DAPageIndicatorView.h */,
-				CF9F8C8E1DE7E81C00B79EFE /* DAPageIndicatorView.m */,
-				CF9F8C8F1DE7E81C00B79EFE /* DAPagesContainer.h */,
-				CF9F8C901DE7E81C00B79EFE /* DAPagesContainer.m */,
-				CF9F8C911DE7E81C00B79EFE /* DAPagesContainerTopBar.h */,
-				CF9F8C921DE7E81C00B79EFE /* DAPagesContainerTopBar.m */,
-			);
-			path = DAPagesContainer;
 			sourceTree = "<group>";
 		};
 		CFEAE25C1DDEDC210043D974 = {
@@ -629,6 +610,8 @@
 		CFEAE29B1DDEDC4E0043D974 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CF63420D1E0269F00077B81F /* UIButton+Size.h */,
+				CF63420E1E0269F10077B81F /* UIButton+Size.m */,
 				CFEAE29C1DDEDC4E0043D974 /* UIView+Extension.h */,
 				CFEAE29D1DDEDC4E0043D974 /* UIView+Extension.m */,
 				CF9F8C431DE5B7BD00B79EFE /* UIImage+JQImage.h */,
@@ -643,8 +626,6 @@
 			children = (
 				CFEAE2A01DDEDC9F0043D974 /* JQHeaderView.h */,
 				CFEAE2A11DDEDC9F0043D974 /* JQHeaderView.m */,
-				CFEAE2A21DDEDC9F0043D974 /* JQSectionPageView.h */,
-				CFEAE2A31DDEDC9F0043D974 /* JQSectionPageView.m */,
 				CF9F8AFA1DE29B9200B79EFE /* JQRefreshHeaader.h */,
 				CF9F8AFB1DE29B9200B79EFE /* JQRefreshHeaader.m */,
 				CF9F8C141DE5418500B79EFE /* JQBTHomeTableViewCell.h */,
@@ -656,10 +637,10 @@
 		CFEAE2A61DDEDCB10043D974 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CFEAE2A71DDEDCCB0043D974 /* JQTableViewController.h */,
-				CFEAE2A81DDEDCCB0043D974 /* JQTableViewController.m */,
-				CF9F8C961DE7E85500B79EFE /* JQHomeListViewController.h */,
-				CF9F8C971DE7E85500B79EFE /* JQHomeListViewController.m */,
+				CFEAE2A71DDEDCCB0043D974 /* JSDHomeViewController.h */,
+				CFEAE2A81DDEDCCB0043D974 /* JSDHomeViewController.m */,
+				CF63420A1E0161A70077B81F /* JSDTableViewController.h */,
+				CF63420B1E0161A80077B81F /* JSDTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -667,7 +648,6 @@
 		CFEAE2AA1DDEDEB20043D974 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				CF9F8C8C1DE7E81C00B79EFE /* DAPagesContainer */,
 				CF9F8C171DE5435E00B79EFE /* Masonry */,
 				CF9F8ABA1DE29ACD00B79EFE /* MJRefresh */,
 				CFEAE2C21DDEE1BE0043D974 /* SDWebImage */,
@@ -910,7 +890,7 @@
 				TargetAttributes = {
 					CFEAE2641DDEDC220043D974 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = GD9P546353;
+						DevelopmentTeam = 9487723JFT;
 						ProvisioningStyle = Automatic;
 					};
 					CFEAE27D1DDEDC220043D974 = {
@@ -971,6 +951,7 @@
 				CF9F8C411DE58C5100B79EFE /* recomand_19.jpg in Resources */,
 				CFEAE2751DDEDC220043D974 /* Assets.xcassets in Resources */,
 				CFEAE3311DDEF2640043D974 /* recomand_15.jpg in Resources */,
+				CF6342111E02A2B40077B81F /* nar_bgbg.png in Resources */,
 				CF9F8AF51DE29ACD00B79EFE /* MJRefresh.bundle in Resources */,
 				CF9F8BA11DE313CF00B79EFE /* header02@2x.jpg in Resources */,
 				CF9F8BF01DE3EDCB00B79EFE /* refresh02.png in Resources */,
@@ -1052,19 +1033,18 @@
 				CF9F8AF01DE29ACD00B79EFE /* MJRefreshBackNormalFooter.m in Sources */,
 				CFEAE26D1DDEDC220043D974 /* AppDelegate.m in Sources */,
 				CF9F8C311DE5435E00B79EFE /* MASCompositeConstraint.m in Sources */,
-				CFEAE2A51DDEDC9F0043D974 /* JQSectionPageView.m in Sources */,
 				CF9F8C321DE5435E00B79EFE /* MASConstraint.m in Sources */,
 				CF9F8AEA1DE29ACD00B79EFE /* MJRefreshFooter.m in Sources */,
 				CFEAE2E91DDEE1BE0043D974 /* SDWebImageDownloader.m in Sources */,
+				CF63420C1E0161A80077B81F /* JSDTableViewController.m in Sources */,
 				CF9F8C331DE5435E00B79EFE /* MASConstraintMaker.m in Sources */,
 				CF9F8C341DE5435E00B79EFE /* MASLayoutConstraint.m in Sources */,
 				CFEAE2C01DDEE1930043D974 /* SDCycleScrollView.m in Sources */,
 				CF9F8AEB1DE29ACD00B79EFE /* MJRefreshHeader.m in Sources */,
-				CF9F8C951DE7E81C00B79EFE /* DAPagesContainerTopBar.m in Sources */,
 				CF9F8AF61DE29ACD00B79EFE /* MJRefreshConst.m in Sources */,
 				CF9F8C371DE5435E00B79EFE /* NSArray+MASAdditions.m in Sources */,
 				CFEAE2A41DDEDC9F0043D974 /* JQHeaderView.m in Sources */,
-				CFEAE2A91DDEDCCB0043D974 /* JQTableViewController.m in Sources */,
+				CFEAE2A91DDEDCCB0043D974 /* JSDHomeViewController.m in Sources */,
 				CFEAE2C11DDEE1930043D974 /* UIView+SDExtension.m in Sources */,
 				CF9F8AED1DE29ACD00B79EFE /* MJRefreshAutoNormalFooter.m in Sources */,
 				CF9F8C3A1DE5435E00B79EFE /* ViewController+MASAdditions.m in Sources */,
@@ -1076,18 +1056,16 @@
 				CFEAE2ED1DDEE1BE0043D974 /* UIButton+WebCache.m in Sources */,
 				CF9F8AEC1DE29ACD00B79EFE /* MJRefreshAutoGifFooter.m in Sources */,
 				CF9F8AF21DE29ACD00B79EFE /* MJRefreshGifHeader.m in Sources */,
-				CF9F8C981DE7E85500B79EFE /* JQHomeListViewController.m in Sources */,
 				CF9F8AE91DE29ACD00B79EFE /* MJRefreshComponent.m in Sources */,
 				CFEAE29E1DDEDC4E0043D974 /* UIView+Extension.m in Sources */,
-				CF9F8C931DE7E81C00B79EFE /* DAPageIndicatorView.m in Sources */,
 				CFEAE2EC1DDEE1BE0043D974 /* SDWebImagePrefetcher.m in Sources */,
-				CF9F8C941DE7E81C00B79EFE /* DAPagesContainer.m in Sources */,
+				CF63420F1E0269F10077B81F /* UIButton+Size.m in Sources */,
 				CF9F8AF71DE29ACD00B79EFE /* UIScrollView+MJExtension.m in Sources */,
 				CFEAE2E81DDEE1BE0043D974 /* SDWebImageDecoder.m in Sources */,
 				CF9F8C161DE5418500B79EFE /* JQBTHomeTableViewCell.m in Sources */,
 				CFEAE2E61DDEE1BE0043D974 /* SDImageCache.m in Sources */,
 				CF9F8C361DE5435E00B79EFE /* MASViewConstraint.m in Sources */,
-				CF9F8C3E1DE57D0C00B79EFE /* JQBTHomeRecomandModel.m in Sources */,
+				CF9F8C3E1DE57D0C00B79EFE /* JSDTHomeRecomandModel.m in Sources */,
 				CFEAE2E71DDEE1BE0043D974 /* SDWebImageCompat.m in Sources */,
 				CF9F8AE81DE29ACD00B79EFE /* MJRefreshBackFooter.m in Sources */,
 				CF9F8AF41DE29ACD00B79EFE /* MJRefreshStateHeader.m in Sources */,
@@ -1244,7 +1222,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GD9P546353;
+				DEVELOPMENT_TEAM = 9487723JFT;
 				INFOPLIST_FILE = JQBanTangHomeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1257,7 +1235,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GD9P546353;
+				DEVELOPMENT_TEAM = 9487723JFT;
 				INFOPLIST_FILE = JQBanTangHomeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
