@@ -15,7 +15,7 @@ by [Joyseedog](http://www.iseedog.com)  [中文文档](https://github.com/JoySee
 [![Screenshot](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome04.gif)](https://github.com/JoySeeDog/JSDBanTangHomeDemo/blob/master/gif/bantanghome04.gif)
 
 
- * This demo provides a simple way to customizable TabBar for your iOS app.
+ * This demo Provides a good idea to achieve a app likes BanTang
  * build in xcode8 with ARC.
 
 
