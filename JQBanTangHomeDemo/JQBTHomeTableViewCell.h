@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 @class JQBTHomeRecomandModel;
+
 @interface JQBTHomeTableViewCell : UITableViewCell
+
 @property (nonatomic, strong) JQBTHomeRecomandModel *homeRecomandModel;
+
 @end

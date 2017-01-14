@@ -32,8 +32,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
     // Do any additional setup after loading the view.
 }
 
@@ -42,15 +40,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) {
@@ -78,50 +67,44 @@
 
 - (void)loadData {
     
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSError *error;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
     
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"json"];
-        NSData *data = [NSData dataWithContentsOfFile:filePath];
-        NSError *error;
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-        
-        NSArray * dataArray = [[dic objectForKey:@"data"] objectForKey:@"topic"];
-        
-        
-        [self.modelArray removeAllObjects];
-        for (unsigned long i = 0; i<[dataArray count]; i++) {
-            JSDTHomeRecomandModel *model = [[JSDTHomeRecomandModel alloc] init];
-            NSString *string = [NSString stringWithFormat:@"recomand_%02ld%@",i+1,@".jpg"];
-            UIImage *image  = [UIImage imageNamed:string];
-            
-            model.placeholderImage = image;
-            
-            NSDictionary *itemDic = dataArray[i];
-            model.picUrl = [itemDic objectForKey:@"pic"];
-            model.title = [itemDic objectForKey:@"title"];
-            model.views = [itemDic objectForKey:@"views"];
-            model.likes = [itemDic objectForKey:@"likes"];
-            
-            NSDictionary *userDic = [itemDic objectForKey:@"user"];
-            model.author = [userDic objectForKey:@"nickname"];
-            
-            [self.modelArray addObject:model];
-            
-        }
-        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-//        });
+    NSArray * dataArray = [[dic objectForKey:@"data"] objectForKey:@"topic"];
     
+    
+    [self.modelArray removeAllObjects];
+    for (unsigned long i = 0; i<[dataArray count]; i++) {
+        JSDTHomeRecomandModel *model = [[JSDTHomeRecomandModel alloc] init];
+        NSString *string = [NSString stringWithFormat:@"recomand_%02ld%@",i+1,@".jpg"];
+        UIImage *image  = [UIImage imageNamed:string];
         
-//    });
+        model.placeholderImage = image;
+        
+        NSDictionary *itemDic = dataArray[i];
+        model.picUrl = [itemDic objectForKey:@"pic"];
+        model.title = [itemDic objectForKey:@"title"];
+        model.views = [itemDic objectForKey:@"views"];
+        model.likes = [itemDic objectForKey:@"likes"];
+        
+        NSDictionary *userDic = [itemDic objectForKey:@"user"];
+        model.author = [userDic objectForKey:@"nickname"];
+        
+        [self.modelArray addObject:model];
+        
+    }
+    
+    
+    [self.tableView reloadData];
 }
-
 
 
 
 - (UITableView *)tableView {
     if (!_tableView) {
+        
         _tableView  = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -142,6 +125,7 @@
 
 - (NSMutableArray *)modelArray {
     if (!_modelArray) {
+        
         _modelArray = [NSMutableArray array];
     }
     return _modelArray;

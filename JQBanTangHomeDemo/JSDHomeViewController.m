@@ -12,9 +12,6 @@
 #import "SDCycleScrollView.h"
 #import "MJRefresh.h"
 #import "JQRefreshHeaader.h"
-
-
-
 #import "JSDTableViewController.h"
 #import "UIButton+Size.h"
 
@@ -28,7 +25,7 @@
 #define PADDING 15.0
 
 
-@interface JSDHomeViewController ()<UIGestureRecognizerDelegate,UIScrollViewDelegate>
+@interface JSDHomeViewController ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) UITableView *currentTableView;
 
@@ -52,13 +49,11 @@
 //存放TableView
 @property(nonatomic,strong)NSMutableArray *tableViews;
 
-//记录当前偏移量
+//记录上一个偏移量
 @property (nonatomic, assign) CGFloat lastTableViewOffsetY;
 
-
-
-
 @end
+
 
 @implementation JSDHomeViewController
 
@@ -66,8 +61,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-    
-      
+        self.automaticallyAdjustsScrollViewInsets = NO;
+
         self.titleButtons = [[NSMutableArray alloc] initWithCapacity:CATEGORY.count];
         self.controlleres = [[NSMutableArray alloc] initWithCapacity:CATEGORY.count];
         self.tableViews = [[NSMutableArray alloc] initWithCapacity:CATEGORY.count];
@@ -78,10 +73,7 @@
        
         [self.view addSubview:self.cycleScrollView];
         [self.view addSubview:self.segmentScrollView];
-        
         [self.view addSubview:self.jqHeaderView];
-       
-        self.automaticallyAdjustsScrollViewInsets = NO;
         
     }
     return self;
@@ -90,7 +82,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-  
     // Do any additional setup after loading the view.
 }
 
@@ -130,20 +121,20 @@
     
     CGFloat tableViewoffsetY = tableView.contentOffset.y;
     
-      NSLog(@"tableViewoffsetY is%@ ,%f",tableView,tableViewoffsetY);
     self.lastTableViewOffsetY = tableViewoffsetY;
     
     if ( tableViewoffsetY>=0 && tableViewoffsetY<=136) {
+        
         self.segmentScrollView.frame = CGRectMake(0, 200-tableViewoffsetY, SCREEN_WIDTH, 40);
         self.cycleScrollView.frame = CGRectMake(0, 0-tableViewoffsetY, SCREEN_WIDTH, 200);
         
-    
-        
     }else if( tableViewoffsetY < 0){
+        
         self.segmentScrollView.frame = CGRectMake(0, 200, SCREEN_WIDTH, 40);
         self.cycleScrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 200);
         
     }else if (tableViewoffsetY > 136){
+        
         self.segmentScrollView.frame = CGRectMake(0, 64, SCREEN_WIDTH, 40);
         self.cycleScrollView.frame = CGRectMake(0, -136, SCREEN_WIDTH, 200);
     }
@@ -159,32 +150,35 @@
     
     int index =  scrollView.contentOffset.x/scrollView.frame.size.width;
     
-    
     UIButton *currentButton = self.titleButtons[index];
     for (UIButton *button in self.titleButtons) {
         button.selected = NO;
     }
     
     currentButton.selected = YES;
-  
+    
     
     self.currentTableView  = self.tableViews[index];
     for (UITableView *tableView in self.tableViews) {
         
         if ( self.lastTableViewOffsetY>=0 &&  self.lastTableViewOffsetY<=136) {
+            
             tableView.contentOffset = CGPointMake(0,  self.lastTableViewOffsetY);
             
         }else if(  self.lastTableViewOffsetY < 0){
+            
             tableView.contentOffset = CGPointMake(0, 0);
             
         }else if ( self.lastTableViewOffsetY > 136){
+            
             tableView.contentOffset = CGPointMake(0, 136);
         }
         
     }
- 
+    
     [UIView animateWithDuration:0.3 animations:^{
         if (index == 0) {
+            
             self.currentSelectedItemImageView.frame = CGRectMake(PADDING, self.segmentScrollView.frame.size.height - 2,currentButton.frame.size.width, 2);
             
         }else{
@@ -205,14 +199,8 @@
 }
 
 
-
 #pragma  mark - 选项卡点击事件
 
-/**
- *  选项卡的点击
- *
- *  @param currentButton 当前点击按钮
- */
 -(void)changeSelectedItem:(UIButton *)currentButton{
     
     for (UIButton *button in self.titleButtons) {
@@ -222,24 +210,28 @@
     
     NSInteger index = [self.titleButtons indexOfObject:currentButton];
     
-  
     self.currentTableView  = self.tableViews[index];
     for (UITableView *tableView in self.tableViews) {
         
-            if ( self.lastTableViewOffsetY>=0 &&  self.lastTableViewOffsetY<=136) {
-                tableView.contentOffset = CGPointMake(0,  self.lastTableViewOffsetY);
-                
-            }else if(self.lastTableViewOffsetY < 0){
-                tableView.contentOffset = CGPointMake(0, 0);
-                
-            }else if ( self.lastTableViewOffsetY > 136){
-                tableView.contentOffset = CGPointMake(0, 136);
-            }
+        if ( self.lastTableViewOffsetY>=0 &&  self.lastTableViewOffsetY<=136) {
+            
+            tableView.contentOffset = CGPointMake(0,  self.lastTableViewOffsetY);
+            
+        }else if(self.lastTableViewOffsetY < 0){
+            
+            tableView.contentOffset = CGPointMake(0, 0);
+            
+        }else if ( self.lastTableViewOffsetY > 136){
+            
+            tableView.contentOffset = CGPointMake(0, 136);
+        }
     }
     
     
     [UIView animateWithDuration:0.3 animations:^{
+        
         if (index == 0) {
+            
             self.currentSelectedItemImageView.frame = CGRectMake(PADDING, self.segmentScrollView.frame.size.height - 2,currentButton.frame.size.width, 2);
             
         }else{
@@ -255,7 +247,6 @@
         }
         self.bottomScrollView.contentOffset = CGPointMake(SCREEN_WIDTH *index, 0);
         
-        
     }];
 }
 
@@ -263,12 +254,12 @@
 #pragma -mark Lazy Load
 
 - (UIScrollView *)bottomScrollView {
+    
     if (!_bottomScrollView) {
         _bottomScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         _bottomScrollView.delegate = self;
         _bottomScrollView.pagingEnabled = YES;
        
-        
         
         NSArray *colors = @[[UIColor redColor],[UIColor blueColor],[UIColor grayColor],[UIColor greenColor],[UIColor purpleColor],[UIColor orangeColor],[UIColor whiteColor],[UIColor redColor],[UIColor blueColor],[UIColor grayColor],[UIColor greenColor]];
         
@@ -303,6 +294,7 @@
 }
 
 - (UIScrollView *)segmentScrollView {
+    
     if (!_segmentScrollView) {
         
         _segmentScrollView =  [[UIScrollView alloc]initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 40)];
@@ -334,10 +326,9 @@
             [self.titleButtons addObject:btn];
             
             //contentSize 等于按钮长度叠加
-            
-            
             //默认选中第一个按钮
             if (i == 0) {
+                
                 btn.selected = YES;
                 _currentSelectedItemImageView.frame = CGRectMake(PADDING, self.segmentScrollView.frame.size.height - 2, btn.frame.size.width, 2);
             }
@@ -358,13 +349,8 @@
 }
 
 
-
-
-#pragma -mark lazy load
-
-
-
 - (SDCycleScrollView *)cycleScrollView {
+    
     if (!_cycleScrollView) {
         
         NSMutableArray *imageMutableArray = [NSMutableArray array];
@@ -381,7 +367,9 @@
 }
 
 - (JQHeaderView *)jqHeaderView {
+    
     if (!_jqHeaderView) {
+        
         _jqHeaderView = [[JQHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
         _jqHeaderView.backgroundColor = [UIColor clearColor];
        

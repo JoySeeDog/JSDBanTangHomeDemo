@@ -24,7 +24,6 @@
 @property (nonatomic, strong) UIView *bottomView;//用于使下面的控件整体居中
 
 
-
 @end
 
 
@@ -34,14 +33,15 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        
         [self.contentView addSubview:self.topicimageView];
-         [self.contentView addSubview:self.titleLabel];
+        [self.contentView addSubview:self.titleLabel];
         [self.contentView addSubview:self.bottomView];
-         [self.contentView addSubview:self.authorLabel];
-         [self.contentView addSubview:self.pvImageView];
-         [self.contentView addSubview:self.pvLabel];
-         [self.contentView addSubview:self.likeImageView];
-         [self.contentView addSubview:self.likeLabel];
+        [self.contentView addSubview:self.authorLabel];
+        [self.contentView addSubview:self.pvImageView];
+        [self.contentView addSubview:self.pvLabel];
+        [self.contentView addSubview:self.likeImageView];
+        [self.contentView addSubview:self.likeLabel];
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
@@ -51,6 +51,7 @@
 
 
 - (void)layoutSubviews {
+    
     [super layoutSubviews];
     
     [_topicimageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -105,6 +106,7 @@
    
 }
 
+
 - (void)setHomeRecomandModel:(JSDTHomeRecomandModel *)homeRecomandModel {
 
     [self.topicimageView sd_setImageWithURL:[NSURL URLWithString:homeRecomandModel.picUrl]  placeholderImage:homeRecomandModel.placeholderImage];
@@ -114,6 +116,9 @@
     self.likeLabel.text = homeRecomandModel.likes;
     
 }
+
+
+#pragma mark - Lazy Load
 
 - (UIImageView *)topicimageView {
     if (!_topicimageView) {

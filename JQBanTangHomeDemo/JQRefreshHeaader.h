@@ -7,9 +7,8 @@
 //
 #import <UIKit/UIKit.h>
 
-UIKIT_EXTERN NSString *const JQTableKeyPathContenOffSet;
-
 @interface JQRefreshHeaader:UIView
+
 @property (nonatomic, weak) UITableView *tableView;
 
 @end

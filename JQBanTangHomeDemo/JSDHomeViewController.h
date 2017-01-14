@@ -10,6 +10,6 @@
 
 
 
-@interface JSDHomeViewController : UIViewController
+@interface JSDHomeViewController : UINavigationController
 
 @end

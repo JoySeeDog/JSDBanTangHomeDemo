@@ -8,9 +8,8 @@
 
 #import "JQRefreshHeaader.h"
 
-NSString *const JQTableKeyPathContenOffSet = @"contentOffset";
-
 @interface  JQRefreshHeaader()
+
 @property (nonatomic, strong) UIImageView *refreshImageView;
 @property (nonatomic, strong) NSMutableArray *imageViews;
 
