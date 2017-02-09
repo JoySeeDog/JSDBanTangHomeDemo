@@ -41,7 +41,8 @@
 
 //存放button
 @property(nonatomic,strong)NSMutableArray *titleButtons;
-
+//记录上一个button
+@property (nonatomic, strong) UIButton *previousButton;
 //存放控制器
 @property(nonatomic,strong)NSMutableArray *controlleres;
 
@@ -151,11 +152,12 @@
     int index =  scrollView.contentOffset.x/scrollView.frame.size.width;
     
     UIButton *currentButton = self.titleButtons[index];
-    for (UIButton *button in self.titleButtons) {
-        button.selected = NO;
-    }
-    
+//     for (UIButton *button in self.titleButtons) {
+//         button.selected = NO;
+//     }
+    _previousButton.selected = NO;
     currentButton.selected = YES;
+    _previousButton = currentButton;
     
     
     self.currentTableView  = self.tableViews[index];
@@ -203,10 +205,13 @@
 
 -(void)changeSelectedItem:(UIButton *)currentButton{
     
-    for (UIButton *button in self.titleButtons) {
-        button.selected = NO;
-    }
+//     for (UIButton *button in self.titleButtons) {
+//         button.selected = NO;
+//     }
+    
+    _previousButton.selected = NO;
     currentButton.selected = YES;
+    _previousButton = currentButton;
     
     NSInteger index = [self.titleButtons indexOfObject:currentButton];
     
@@ -330,6 +335,8 @@
             if (i == 0) {
                 
                 btn.selected = YES;
+                _previousButton = btn;
+                
                 _currentSelectedItemImageView.frame = CGRectMake(PADDING, self.segmentScrollView.frame.size.height - 2, btn.frame.size.width, 2);
             }
         }
